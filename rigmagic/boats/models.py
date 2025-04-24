@@ -42,7 +42,7 @@ class SailData(models.Model):
     mizzen = models.BooleanField(default=False)
     mp = models.FloatField(null=True, blank=True)
     me = models.FloatField(null=True, blank=True)
-    imperial_or_metric = models.CharField(choices=[('imperial', 'Imperial'), ('metric', 'Metric')], max_length=10, default='metric')
+    imperial_or_metric = models.CharField(choices=[('imperial', 'Imperial'), ('metric', 'Metric')], max_length=10, default='imperial')
 
     def __str__(self):
         return f"Sail Data for {self.boat.make} {self.boat.model} {self.boat.type} {self.boat.variant}"
