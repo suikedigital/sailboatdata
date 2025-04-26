@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Boats{% endblock %}
+
+{% block content %}
+<div class="container text-center py-5">
+    <h1 class="display-4">Boats</h1>
+    <ul class="list-group">
+        {% for boat in boats %}
+        <li class="list-group-item">
+            {{ boat.make }} {{ boat.model }} ({{ boat.type }})
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
